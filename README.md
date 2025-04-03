@@ -17,7 +17,7 @@ Welcome to the Pay Portal Application! This project aims to replicate the basic 
 
 ## Getting Started
 
-To get started with the Paytm Clone project, follow these steps:
+To get started with the Pay-Portal project, follow these steps:
 
 1. Clone the repository from GitHub:
 
