@@ -9,15 +9,7 @@ dotenv.config();
 
 app.use(express.json());
 
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://pay-portal-application-aaqm.vercel.app'],
-  credentials: true,  // Allow cookies, auth headers
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
-}));
-
-// Handle Preflight Requests
-app.options("*", cors()); 
+app.use(cors());
 
 app.use("/api/v1", mainRouter);
 
