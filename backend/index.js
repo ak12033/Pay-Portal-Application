@@ -9,8 +9,9 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cors({
-  origin:['http://localhost:5173','pay-portal-application-aaqm.vercel.app']
-  }));
+  origin: ['http://localhost:5173', 'https://pay-portal-application-aaqm.vercel.app'],
+  credentials: true
+}));
 
 app.use("/api/v1", mainRouter);
 
