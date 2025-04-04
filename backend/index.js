@@ -8,7 +8,6 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
-
 app.use(cors());
 
 app.use("/api/v1", mainRouter);
@@ -29,8 +28,6 @@ const connectDB = async () => {
     console.log(err);
   }
 };
-const allowedOrigins = ['http://localhost:5173','https://pay-portal-application-aaqm.vercel.app/']
-app.use(cors({origin: allowedOrigins, credentials : true}))
 
 app.get("/", (req, res) => {
   res.json("Server is up and running");
