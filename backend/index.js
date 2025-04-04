@@ -21,12 +21,10 @@ app.use("/api/v1", mainRouter);
 
 //database
 const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("database is connected successfully!");
-  } catch (err) {
-    console.log(err);
-  }
+
+  mongoose.connection.on('connected', () => console.log("Database Connected"));
+  
+  await mongoose.connect(`${process.env.MONGO_URL}/paytm`);
 };
 
 app.get("/", (req, res) => {
