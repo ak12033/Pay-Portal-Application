@@ -28,7 +28,7 @@ const connectDB = async () => {
 };
 
 app.get("/", (req, res) => {
-  res.json("Server is up and running");
+  res.send("Server is up and running");
 });
 
 app.listen(process.env.PORT, () => {
